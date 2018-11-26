@@ -1,10 +1,10 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
 #include <windows.h>
-#include <filesystem>
-#include "Shapes/Point2D.h"
-#include "Shapes/Triangle.h"
 #include "Renderer.h"
+#include "Shapes/Square.h"
+#include "Shapes/Rectangle.h"
+#include "Shapes/Rhombus.h"
 
 using namespace Labs;
 
@@ -12,6 +12,10 @@ std::string GetFontPath();
 
 int main()
 {
+	std::cout << "Rectangle size in memory: " << sizeof(Labs::Rectangle) << std::endl;
+	std::cout << "Rhombus size in memory: " << sizeof(Rhombus) << std::endl;
+	std::cout << "Square size in memory: " << sizeof(Square) << std::endl;
+
 	sf::ContextSettings settings;
 	settings.antialiasingLevel = 8;
 	sf::RenderWindow window(sf::VideoMode(800, 600), "Lab2", sf::Style::Default, settings);

@@ -5,9 +5,9 @@
 
 namespace Labs
 {
-	class Rectangle : public Polygon
+	class Rectangle : public virtual Polygon
 	{
-	private:
+	protected:
 		Point2D m_LbCorner;
 		Point2D m_RtCorner;
 		double m_Width;
@@ -19,7 +19,6 @@ namespace Labs
 		inline double GetWidth() const { return m_Width; };
 		inline double GetHeight() const { return m_Height; };
 		double Area() const override;
-		void Display(sf::RenderWindow &window) override;
 	};
 
 }

@@ -34,7 +34,7 @@ namespace Labs
 		totalAreaText.setString(std::string("Total area: ") + std::to_string((int)totalArea));
 		totalAreaText.setCharacterSize(18);
 		totalAreaText.setFillColor(sf::Color::White);
-		totalAreaText.setPosition(sf::Vector2f(50, window.getSize().y - 50));
+		totalAreaText.setPosition(sf::Vector2f(50.0, (float)(window.getSize().y - 50)));
 
 		window.draw(totalAreaText);
 

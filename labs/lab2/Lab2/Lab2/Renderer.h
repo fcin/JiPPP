@@ -1,7 +1,6 @@
 #pragma once
 #include <vector>
 #include "Shapes/Polygon.h"
-#include "Shapes/Triangle.h"
 
 namespace Labs
 {

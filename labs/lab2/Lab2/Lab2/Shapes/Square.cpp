@@ -14,7 +14,13 @@ namespace Labs
 
 	void Square::Display(sf::RenderWindow & window)
 	{
-		Rectangle::Display(window);
+		float x = (float)(m_LbCorner.X - m_Width / 2.0);
+		float y = (float)(m_LbCorner.Y - m_Height / 2.0);
+		sf::RectangleShape rect;
+		rect.setSize(sf::Vector2f((float)m_Width, (float)m_Height));
+		rect.setPosition(sf::Vector2f(x, y));
+		rect.setFillColor(sf::Color::Green);
+		window.draw(rect);
 	}
 
 }

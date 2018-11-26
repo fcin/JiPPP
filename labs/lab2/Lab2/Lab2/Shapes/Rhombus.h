@@ -1,11 +1,10 @@
 #pragma once
 #include "Point2D.h"
 #include "Polygon.h"
-#include <SFML/Graphics.hpp>
 
 namespace Labs
 {
-	class Rhombus
+	class Rhombus : public virtual Polygon
 	{
 	private:
 		Point2D m_Center;
