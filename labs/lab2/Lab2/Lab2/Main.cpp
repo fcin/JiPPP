@@ -1,18 +1,26 @@
 #include <iostream>
-#include "Shapes/Point2D.h"
-#include "Shapes/Triangle.h"
-#include "Shapes/Rectangle.h"
-#include "Shapes/Circle.h"
-#include "Shapes/Square.h"
-#include "Shapes/Rhombus.h"
+#include <SFML/Graphics.hpp>
 
 int main()
 {
-	Triangle tri(Point2D(0, 0), 5, 4);
-	Rectangle rect = Square(Point2D(0, 0), 5);
-	Polygon* rh = new Rhombus(Point2D(0, 0), 5, 3);
-	std::cout << rh->Area() << std::endl;
-	delete rh;
+	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+	sf::CircleShape shape(100.f);
+	shape.setFillColor(sf::Color::Green);
+
+	while (window.isOpen())
+	{
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			if (event.type == sf::Event::Closed)
+				window.close();
+		}
+
+		window.clear();
+		window.draw(shape);
+		window.display();
+	}
+
 	std::getchar();
 	return 0;
 }
