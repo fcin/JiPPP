@@ -1,9 +1,13 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
-class Polygon
+namespace Labs
 {
-public:
-	virtual double Area() const = 0;
-	virtual void Display(sf::RenderWindow& window) = 0;
-};
+	class Polygon
+	{
+	public:
+		virtual double Area() const = 0;
+		virtual void Display(sf::RenderWindow& window) = 0;
+	};
+
+}

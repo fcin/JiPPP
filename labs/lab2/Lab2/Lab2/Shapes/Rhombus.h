@@ -3,13 +3,17 @@
 #include "Polygon.h"
 #include <SFML/Graphics.hpp>
 
-class Rhombus
+namespace Labs
 {
-private:
-	Point2D m_Center;
-	double m_Diagonal1;
-	double m_Diagonal2;
+	class Rhombus
+	{
+	private:
+		Point2D m_Center;
+		double m_Diagonal1;
+		double m_Diagonal2;
 
-public:
-	Rhombus(Point2D center, double diag1, double diag2);
-};
+	public:
+		Rhombus(Point2D center, double diag1, double diag2);
+	};
+
+}
