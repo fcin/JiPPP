@@ -1,6 +1,7 @@
 #pragma once
 #include "Point2D.h"
 #include "Polygon.h"
+#include <SFML/Graphics.hpp>
 
 class Triangle : public Polygon
 {
@@ -15,4 +16,5 @@ public:
 	inline double GetHeight() const { return m_Height; };
 	double Area() const override;
 	bool HasGreaterArea(Polygon& rect) const;
+	void Display(sf::RenderWindow& window) override;
 };

@@ -13,4 +13,12 @@ bool Triangle::HasGreaterArea(Polygon& polygon) const
 	return this->Area() > polygon.Area();
 }
 
+void Triangle::Display(sf::RenderWindow& window)
+{
+	sf::CircleShape triangle((float)m_Width, 3);
+	triangle.setFillColor(sf::Color::Red);
+	triangle.setPosition((float)m_Anchor.X, (float)m_Anchor.Y);
+	window.draw(triangle);
+}
+
 
