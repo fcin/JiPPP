@@ -6,7 +6,7 @@
 class Triangle : public Polygon
 {
 private:
-	Point2D m_Anchor;
+	Point2D m_Center;
 	double m_Width;
 	double m_Height;
 

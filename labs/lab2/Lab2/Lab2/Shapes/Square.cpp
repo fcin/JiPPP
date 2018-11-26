@@ -9,3 +9,8 @@ double Square::Area() const
 {
 	return this->GetWidth() * this->GetHeight();
 }
+
+void Square::Display(sf::RenderWindow & window)
+{
+	Rectangle::Display(window);
+}

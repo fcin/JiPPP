@@ -1,4 +1,6 @@
 #include "Renderer.h"
+#include "Shapes/Square.h"
+#include "Shapes/Circle.h"
 
 Renderer::Renderer() { }
 
@@ -25,12 +27,12 @@ void Renderer::DisplayAll(sf::RenderWindow& window) const
 
 void Renderer::OnLeftMouseClick(int mouseX, int mouseY)
 {
-	Polygon* tri = new Triangle(Point2D(mouseX, mouseY), 100, 100);
-	AddPolygon(tri);
+	Polygon* poly = new Square(Point2D(mouseX, mouseY), 100);
+	AddPolygon(poly);
 }
 
 void Renderer::OnRightMouseClick(int mouseX, int mouseY)
 {
-	Polygon* tri = new Triangle(Point2D(mouseX, mouseY), 100, 100);
-	AddPolygon(tri);
+	Polygon* poly = new Circle(Point2D(mouseX, mouseY), 100);
+	AddPolygon(poly);
 }

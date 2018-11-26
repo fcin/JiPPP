@@ -1,6 +1,7 @@
 #pragma once
 #include "Point2D.h"
 #include "Polygon.h"
+#include <SFML/Graphics.hpp>
 
 class Rectangle : public Polygon
 {
@@ -16,4 +17,5 @@ public:
 	inline double GetWidth() const { return m_Width; };
 	inline double GetHeight() const { return m_Height; };
 	double Area() const override;
+	void Display(sf::RenderWindow &window) override;
 };

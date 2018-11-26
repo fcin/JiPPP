@@ -1,8 +1,9 @@
 #pragma once
 #include "Point2D.h"
 #include "Polygon.h"
+#include <SFML/Graphics.hpp>
 
-class Rhombus : public Polygon
+class Rhombus
 {
 private:
 	Point2D m_Center;
@@ -11,5 +12,4 @@ private:
 
 public:
 	Rhombus(Point2D center, double diag1, double diag2);
-	double Area() const override;
 };
