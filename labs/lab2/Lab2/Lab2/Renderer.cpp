@@ -4,7 +4,7 @@
 
 namespace Labs
 {
-	Renderer::Renderer() { }
+	Renderer::Renderer(sf::Font &font) : m_Font(font) { }
 
 	Renderer::~Renderer()
 	{
@@ -21,8 +21,22 @@ namespace Labs
 
 	void Renderer::DisplayAll(sf::RenderWindow& window) const
 	{
+		double totalArea = 0;
+
 		for (size_t index = 0; index < m_Shapes.size(); index++)
+		{
+			totalArea += m_Shapes[index]->Area();
 			m_Shapes[index]->Display(window);
+		}
+
+		sf::Text totalAreaText;
+		totalAreaText.setFont(m_Font);
+		totalAreaText.setString(std::string("Total area: ") + std::to_string((int)totalArea));
+		totalAreaText.setCharacterSize(18);
+		totalAreaText.setFillColor(sf::Color::White);
+		totalAreaText.setPosition(sf::Vector2f(50, window.getSize().y - 50));
+
+		window.draw(totalAreaText);
 
 		window.display();
 	}

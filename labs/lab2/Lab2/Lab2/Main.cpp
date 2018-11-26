@@ -25,7 +25,7 @@ int main()
 		return 0;
 	}
 
-	Renderer renderer;
+	Renderer renderer(font);
 
 	while (window.isOpen())
 	{

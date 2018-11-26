@@ -9,9 +9,10 @@ namespace Labs
 	{
 	private:
 		std::vector<Polygon*> m_Shapes;
+		sf::Font &m_Font;
 
 	public:
-		Renderer();
+		Renderer(sf::Font &font);
 		~Renderer();
 		void AddPolygon(Polygon *tri);
 		void DisplayAll(sf::RenderWindow& window) const;
