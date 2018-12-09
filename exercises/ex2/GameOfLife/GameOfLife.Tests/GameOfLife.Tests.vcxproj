@@ -99,7 +99,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;$(SolutionDir)GameOfLife\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Board.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Board.obj;Effect0.obj;Effect1.obj;Effect2.obj;Effect3.obj;Effect4.obj;Effect5.obj;Effect6.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -132,7 +132,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalLibraryDirectories>$(VCInstallDir)UnitTest\lib;$(SolutionDir)GameOfLife\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>Board.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Board.obj;Effect0.obj;Effect1.obj;Effect2.obj;Effect3.obj;Effect4.obj;Effect5.obj;Effect6.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -158,6 +158,7 @@
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="EffectsTests.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

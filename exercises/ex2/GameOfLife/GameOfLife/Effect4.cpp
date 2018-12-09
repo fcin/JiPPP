@@ -16,8 +16,11 @@ void Effect4::apply(const Board** boards, unsigned int x, unsigned int y, unsign
 		{
 			size_t index = indexY * 16 + indexX;
 			int value = cells[index];
-			if (value != 0)
+			if (value == 1)
+			{
+				toReplace.push_back(0);
 				continue;
+			}
 
 			int leftTop = board->GetNeighbour(indexX, indexY, -1, -1);
 			int top = board->GetNeighbour(indexX, indexY, 0, -1);
@@ -32,13 +35,21 @@ void Effect4::apply(const Board** boards, unsigned int x, unsigned int y, unsign
 				cells[leftBottom] + cells[bottom] + cells[rightBottom] +
 				cells[left] + cells[right];
 
-			if (sum != 3)
-				continue;
-
-			toReplace.push_back(index);
+			if (sum == 3)
+				toReplace.push_back(1);
+			else
+				toReplace.push_back(0);
 		}
 	}
 
-	for (size_t index = 0; index < toReplace.size(); index++)
-		cells[toReplace[index]] = 1;
+	int curr = 0;
+	for (size_t indexY = y; indexY <= dy; indexY++)
+	{
+		for (size_t indexX = x; indexX <= dx; indexX++)
+		{
+			size_t index = indexY * 16 + indexX;
+			cells[index] = toReplace[curr];
+			curr++;
+		}
+	}
 }
