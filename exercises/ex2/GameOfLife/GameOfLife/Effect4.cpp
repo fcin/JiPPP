@@ -32,7 +32,7 @@ void Effect4::apply(const Board** boards, unsigned int x, unsigned int y, unsign
 				cells[leftBottom] + cells[bottom] + cells[rightBottom] +
 				cells[left] + cells[right];
 
-			if (sum == 3)
+			if (sum != 3)
 				continue;
 
 			toReplace.push_back(index);
