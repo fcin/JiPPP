@@ -12,6 +12,7 @@ int * Board::GetCells() const
 	return m_Cells;
 }
 
+// Returns index
 unsigned int Board::GetNeighbour(unsigned int x, unsigned int y, int offsetX, int offsetY) const
 {
 	int resultX = -1;
@@ -30,7 +31,7 @@ unsigned int Board::GetNeighbour(unsigned int x, unsigned int y, int offsetX, in
 	else
 		resultY = y + offsetY;
 
-	return m_Cells[resultY * 16 + resultX];
+	return resultY * 16 + resultX;
 }
 
 
