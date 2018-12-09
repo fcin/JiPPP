@@ -155,7 +155,7 @@
     <ClCompile Include="Effect4.cpp" />
     <ClCompile Include="Effect5.cpp" />
     <ClCompile Include="Effect6.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
