@@ -16,20 +16,22 @@ int * Board::GetCells() const
 unsigned int Board::GetNeighbour(unsigned int x, unsigned int y, int offsetX, int offsetY) const
 {
 	int resultX = -1;
-	if ((x + offsetX) < 0)
+	int ux = (int)x;
+	int uy = (int)y;
+	if ((ux + offsetX) < 0)
 		resultX = 16 + offsetX;
-	else if ((x + offsetX) > 15)
+	else if ((ux + offsetX) > 15)
 		resultX = offsetX - 1;
 	else
-		resultX = x + offsetX;
+		resultX = ux + offsetX;
 
 	int resultY = -1;
-	if ((y + offsetY) < 0)
+	if ((uy + offsetY) < 0)
 		resultY = 16 + offsetY;
-	else if ((y + offsetY) > 15)
+	else if ((uy + offsetY) > 15)
 		resultY = offsetY - 1;
 	else
-		resultY = y + offsetY;
+		resultY = uy + offsetY;
 
 	return resultY * 16 + resultX;
 }

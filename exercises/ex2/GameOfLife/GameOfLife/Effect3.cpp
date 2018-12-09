@@ -16,12 +16,26 @@ void Effect3::apply(Board & board, unsigned int x, unsigned int y, unsigned int 
 			if (value != 1)
 				continue;
 
-			int top = indexY == 0 ? cells[(16 - 1) * 16 + indexX + 0] : cells[(indexY - 1) * 16 + indexX + 0];
-			int bottom = indexY == 15 ? cells[(0 - 0) * 16 + indexX + 0] : cells[(indexY + 1) * 16 + indexX + 0];
-			int left = indexX == 0 ? cells[indexY * 16 + 15] : cells[indexY * 16 + (indexX - 1)];
-			int right = indexX == 15 ? cells[indexY * 16 + 0] : cells[indexY * 16 + (indexX + 1)];
+			int leftTop =		board.GetNeighbour(indexX, indexY, -1, -1);
+			int top =			board.GetNeighbour(indexX, indexY,  0, -1);
+			int rightTop =		board.GetNeighbour(indexX, indexY,  1, -1);
+			int leftBottom =	board.GetNeighbour(indexX, indexY, -1, 1);
+			int bottom =		board.GetNeighbour(indexX, indexY,  0, 1);
+			int rightBottom =	board.GetNeighbour(indexX, indexY,  1, 1);
+			int left =			board.GetNeighbour(indexX, indexY, -1, 0);
+			int right =			board.GetNeighbour(indexX, indexY,  1, 0);
 
-			board.GetNeighbour(5, 5, 5, 5);
+			int sum = cells[leftTop] + cells[top] + cells[rightTop] +
+				cells[leftBottom] + cells[bottom] + cells[rightBottom] +
+				cells[left] + cells[right];
+
+			if (sum == 2 || sum == 3)
+				continue;
+
+			toReplace.push_back(index);
 		}
 	}
+
+	for (size_t index = 0; index < toReplace.size(); index++)
+		cells[toReplace[index]] = 0;
 }
