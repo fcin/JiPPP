@@ -154,6 +154,7 @@
     <ClCompile Include="Effect3.cpp" />
     <ClCompile Include="Effect4.cpp" />
     <ClCompile Include="Effect5.cpp" />
+    <ClCompile Include="Effect6.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +166,7 @@
     <ClInclude Include="Effect3.h" />
     <ClInclude Include="Effect4.h" />
     <ClInclude Include="Effect5.h" />
+    <ClInclude Include="Effect6.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
