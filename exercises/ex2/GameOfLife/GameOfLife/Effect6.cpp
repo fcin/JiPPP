@@ -2,6 +2,14 @@
 
 Effect6::Effect6() { }
 
+Effect6::~Effect6()
+{
+	if (m_BoardState1)
+		delete m_BoardState1;
+	if (m_BoardState2)
+		delete m_BoardState2;
+}
+
 void Effect6::apply(const Board ** boards, unsigned int x, unsigned int y, unsigned int dx, unsigned int dy, int boardId)
 {
 	if (boardId == 0 && m_BoardState1 == nullptr)

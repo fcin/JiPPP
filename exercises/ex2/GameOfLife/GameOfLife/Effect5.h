@@ -1,4 +1,6 @@
-#pragma once
+#ifndef EFFECT5_H
+#define EFFECT5_H
+
 #include "Board.h"
 #include "Effect.h"
 #include <vector>
@@ -11,5 +13,8 @@ private:
 
 public:
 	Effect5();
+	~Effect5();
 	virtual void apply(const Board** boards, unsigned int x, unsigned int y, unsigned int dx, unsigned int dy, int boardId) override;
 };
+
+#endif

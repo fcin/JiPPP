@@ -1,4 +1,5 @@
-#pragma once
+#ifndef BOARD_H
+#define BOARD_H
 #include <string>
 
 class Board
@@ -12,3 +13,5 @@ public:
 	int* GetCells() const;
 	unsigned int GetNeighbour(unsigned int x, unsigned int y, int offsetX, int offsetY) const;
 };
+
+#endif
