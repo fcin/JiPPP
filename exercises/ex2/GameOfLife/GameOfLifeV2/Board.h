@@ -1,6 +1,8 @@
 #ifndef BOARD_H
 #define BOARD_H
 
+#include <iostream>
+
 class Board
 {
 private:
@@ -8,8 +10,9 @@ private:
 
 public:
 	Board();
-	const int At(unsigned int x, unsigned y) const;
-	void Set(unsigned int x, unsigned y, int value);
+	const int At(unsigned int row, unsigned col) const;
+	void Set(unsigned int row, unsigned int col, int value);
+	int GetNeighbourCount(unsigned int row, unsigned col);
 };
 
 #endif

@@ -19,7 +19,29 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Board.cpp" />
+    <ClCompile Include="Effect0.cpp" />
+    <ClCompile Include="Effect1.cpp" />
+    <ClCompile Include="Effect2.cpp" />
+    <ClCompile Include="Effect3.cpp" />
+    <ClCompile Include="Effect4.cpp" />
+    <ClCompile Include="Effect5.cpp" />
+    <ClCompile Include="Effect6.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Parser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Board.h" />
+    <ClInclude Include="Effect.h" />
+    <ClInclude Include="Effect0.h" />
+    <ClInclude Include="Effect1.h" />
+    <ClInclude Include="Effect2.h" />
+    <ClInclude Include="Effect3.h" />
+    <ClInclude Include="Effect4.h" />
+    <ClInclude Include="Effect5.h" />
+    <ClInclude Include="Effect6.h" />
+    <ClInclude Include="KeyValuePair.h" />
+    <ClInclude Include="Parser.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
