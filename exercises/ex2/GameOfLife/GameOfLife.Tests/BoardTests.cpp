@@ -5,11 +5,11 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace GameOfLifeTests
 {		
-	TEST_CLASS(UnitTest1)
+	TEST_CLASS(BoardTests)
 	{
 	public:
 		
-		TEST_METHOD(TestMethod1)
+		TEST_METHOD(MiddleOfTheBoardNeighbours)
 		{
 			Assert::AreEqual(true, true);
 		}

@@ -8,4 +8,5 @@ private:
 public:
 	Board();
 	int* GetCells() const;
+	unsigned int GetNeighbour(unsigned int x, unsigned int y, int offsetX, int offsetY) const;
 };
