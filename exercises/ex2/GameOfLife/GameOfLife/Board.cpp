@@ -7,6 +7,18 @@ Board::Board()
 		m_Cells[index] = 0;
 }
 
+Board::~Board()
+{
+	delete[] m_Cells;
+}
+
+Board::Board(const Board * other)
+{
+	m_Cells = new int[16 * 16];
+	for (size_t index = 0; index < 16 * 16; index++)
+		m_Cells[index] = other->m_Cells[index];
+}
+
 int * Board::GetCells() const
 {
 	return m_Cells;
