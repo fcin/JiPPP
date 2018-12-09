@@ -1,8 +1,7 @@
 #pragma once
 #include "Board.h"
-
 class Effect
 {
 public:
-	virtual void apply(Board& board, unsigned int x, unsigned int y, unsigned int dx, unsigned int dy) = 0;
+	virtual void apply(const Board** boards, unsigned int x, unsigned int y, unsigned int dx, unsigned int dy, int boardId) = 0;
 };
