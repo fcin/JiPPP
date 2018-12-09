@@ -36,10 +36,17 @@ void Effect5::apply(const Board ** boards, unsigned int x, unsigned int y, unsig
 	}
 
 	int* selectedBoardCells = boards[boardId]->GetCells();
+	int curr = 0;
 
-	for (size_t index = 0; index < newState.size(); index++)
+	for (size_t indexY = y; indexY <= dy; indexY++)
 	{
-		selectedBoardCells[index] = newState[index];
+		for (size_t indexX = x; indexX <= dx; indexX++)
+		{
+			size_t index = indexY * 16 + indexX;
+
+			selectedBoardCells[index] = newState[curr];
+			curr++;
+		}
 	}
 
 	if (boardId == 0)
